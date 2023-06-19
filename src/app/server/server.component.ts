@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  // element to use  in the html
   selector: 'app-server',
-  // html file
   templateUrl: './server.component.html',
 })
-export class ServerComponent {}
+export class ServerComponent {
+  serverId: number = 10;
+  serverStatus: string = 'offline';
+
+  getServerStatus() {
+    return this.serverStatus;
+  }
+}

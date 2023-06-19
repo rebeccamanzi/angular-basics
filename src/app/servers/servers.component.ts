@@ -13,7 +13,16 @@ import { Component } from '@angular/core';
   // selector by id it's not supported
 
   // only use the template like this if you have untill 3 lines of code
-  template: `<app-server></app-server> <app-server></app-server>`,
+  // template: `<app-server></app-server> <app-server></app-server>`,
+  templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css'],
 })
-export class ServersComponent {}
+export class ServersComponent {
+  allowNewServer = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000)
+  }
+}
